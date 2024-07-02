@@ -76,6 +76,7 @@
 			margin: -4%;
 		}
 	</style>
+	
 	<style amp-custom>
 		body {
 			font-family: "Montserrat", sans-serif;
@@ -87,17 +88,17 @@
 			font-family: "Montserrat", sans-serif !important;
 		}
 		.title {
-			color: rgb(255, 255, 255);
-			font-size: 2em;
-			text-align: center;
-			margin-bottom: 10px;
-			height: 30px;
-			font-size: 35px;
-			line-height: 0.9;
 			font-family: "Montserrat", sans-serif;
 			font-style: normal;
+			color: rgb(255, 255, 255);
+			text-align: center;
+			height: 30px;
 			font-weight: normal;
 			visibility: visible;
+			font-size: 47px;  
+			width: 5rem;
+			text-align: justify; 
+			margin-bottom: 100px;
 		}
 
 		.end-title {
@@ -105,7 +106,8 @@
 		}
 
 		.description {
-			line-height: 1.1;
+			line-height: 2;
+			max-width: 300px;
 			font-style: normal;
 			font-weight: normal;
 			visibility: visible;
@@ -141,14 +143,6 @@
 			max-width: 600px;
 		}
 
-		.first-page-text {
-			color: white;
-			position: absolute;
-			top: 0;
-			left: 0;
-			max-width: 600px;
-		}
-
 		.end-text {
 			background-color: rgb(107, 171, 61);
 			color: white;
@@ -168,10 +162,24 @@
 			visibility: visible;
 		}
 
-		
+		.nsj_logo {
+			height: 300px;
+			width: auto;
+		}
 
+		.first-page-text {
+			align-items: left; text-align: left;margin-left: 3rem;height: 100%;
+		}
 
 		@media (max-width: 900px) {
+			.first-page-text {
+				margin-left: 0;
+			}
+
+			.nsj_logo {
+				height: 200px;
+			}
+
 			.semi-transparent-text {
 				position: static;
 				margin: 0 auto;
@@ -221,15 +229,9 @@
 		}
 
 		@media (max-width: 450px) {
-			.end-text {
-				max-width: 100vw;
-				width: 100vh;
-				border-radius: 0;
-				position: absolute;
-				display: block;
-				text-align: center;
-				bottom: 0;
-				left: 0;
+			.body {
+				line-height: 1 !important;
+				font-size: 10px !important;
 			}
 		}
 	</style>
@@ -312,16 +314,13 @@
 					layout="responsive"></amp-img>
 			</amp-story-grid-layer>
 			<amp-story-grid-layer template="vertical">
-				<div class="container">
-					<div class="first-page-text"
-						style="align-items: left; margin-left: -1.5rem; text-align: left; max-width: 400px">
-						<amp-img src="assets/images/12.png"
-							style="margin-bottom: -5rem; height: 500px; width: 700px; margin-left: -3.5rem; margin-top: -3rem;"
-							layout="responsive" class="max-width-image"></amp-img>
-						<h1 class="title" style="line-height: 1; font-size: 47px;  width: 300px; text-align: justify; margin-left: 3rem; margin-bottom: 3rem;">
+					<div class="first-page-text">
+						<img src="assets/images/12.webp" class="nsj_logo"
+							layout="responsive" class="max-width-image">
+						<h1 class="title">
 							PRAKTISCHE<br>
 							INFORMATIE</h1>
-						<p class="description" style="line-height: 2; max-width: 300px; margin-left: 3rem;">Wij kijken ernaar uit om jou
+						<p class="description">Wij kijken ernaar uit om jou
 							en jouw
 							gasten bij een nieuwe editie van het
 							NN North Sea Jazz Festival te mogen
@@ -332,7 +331,6 @@
 							onderstaande informatie aandachtig
 							door te lezen.</p>
 					</div>
-				</div>
 				</div>
 			</amp-story-grid-layer>
 		</amp-story-page>
